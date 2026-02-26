@@ -991,6 +991,64 @@
     }
 
     /* ─────────────────────────────────────────────
+       REFERENCE PLACEHOLDER (no image available)
+    ───────────────────────────────────────────── */
+    .ref-img-placeholder {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(145deg, #1C0A0E 0%, #2E2441 50%, #101314 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ref-img-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 30% 40%, rgba(216,160,85,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 75% 65%, rgba(89,102,157,0.15) 0%, transparent 60%);
+    }
+
+    .ref-img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 18px,
+        rgba(216,160,85,0.03) 18px,
+        rgba(216,160,85,0.03) 19px
+      );
+    }
+
+    .ref-placeholder-label {
+      font-family: var(--fa);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.55;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .ref-placeholder-icon {
+      font-size: 28px;
+      position: relative;
+      z-index: 1;
+      opacity: 0.35;
+    }
+
+    /* ─────────────────────────────────────────────
        SCROLL REVEAL
     ───────────────────────────────────────────── */
     .reveal {
@@ -1313,6 +1371,38 @@
     <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
       <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868532/file/895dfb3a69021675bdfbc2e377450a73.png?resize=752x&vertical=center" alt="Sustainability Tracker" loading="lazy"></div>
       <div class="ref-meta"><div class="ref-title">Sustainability</div><div class="ref-studio">Wear tracker</div></div>
+    </a>
+  </div>
+
+  <!-- Row 3: Wardrobe Ideas -->
+  <p class="row2-label reveal" style="margin-top:44px">WARDROBE IDEAS — ADDITIONAL REFERENCES</p>
+  <div class="refs-row2 reveal-stagger" style="grid-template-columns: repeat(2, 1fr); max-width: 640px;">
+    <a class="ref-card" href="https://dribbble.com/shots/24594776-Wardrobe-Mobile-App-animation" target="_blank" rel="noopener">
+      <div class="ref-img-placeholder tall" style="height:300px">
+        <div class="ref-placeholder-icon">🗂️</div>
+        <div class="ref-placeholder-label">Wardrobe Mobile App<br>Animation · Dribbble</div>
+      </div>
+      <div class="ref-meta">
+        <div class="ref-title">Wardrobe Mobile App</div>
+        <div class="ref-studio">Dribbble · Animation concept</div>
+        <div class="ref-colors">
+          <div class="ref-dot" style="background:#1C0A0E;border:1px solid rgba(216,160,85,.3)"></div>
+          <div class="ref-dot" style="background:#D8A055"></div>
+          <div class="ref-dot" style="background:#EAE8DC"></div>
+        </div>
+      </div>
+    </a>
+    <a class="ref-card" href="https://www.behance.net/gallery/244072231/Wearly-AI-powered-digital-wardrobe-uiux-case-study" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/f1e5dc244072231.Y3JvcCwxMTg4LDkzMCwxMDUsMA.png" alt="Wearly – AI Wardrobe by Clara Patience" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">Wearly</div>
+        <div class="ref-studio">Clara Patience · Behance · AI Wardrobe Case Study</div>
+        <div class="ref-colors">
+          <div class="ref-dot" style="background:#FDF4E9"></div>
+          <div class="ref-dot" style="background:#956E64"></div>
+          <div class="ref-dot" style="background:#2E2441"></div>
+        </div>
+      </div>
     </a>
   </div>
 </div></div>
