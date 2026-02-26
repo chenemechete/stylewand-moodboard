@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleWand — Brand Mood Board 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─────────────────────────────────────────────
+       RESET & ROOT
+    ───────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Luxury Noir */
+      --noir-black:    #0D0708;
+      --noir-burgundy: #1C0A0E;
+      --noir-crimson:  #561926;
+      --noir-rose:     #993436;
+      --gold:          #D8A055;
+      --champagne:     #E2D1BB;
+
+      /* Cultural Earth */
+      --indigo:  #2E2441;
+      --clay:    #956E64;
+      --saffron: #C38A3E;
+      --cream:   #FDF4E9;
+      --linen:   #EAE8DC;
+      --sage:    #718777;
+
+      /* AI Clarity */
+      --onyx:       #101314;
+      --slate:      #3B4447;
+      --periwinkle: #59669D;
+      --ice:        #F2F7F8;
+      --rose-pop:   #F66D94;
+      --violet:     #A35DAE;
+
+      /* Font stacks */
+      --fc: 'Cormorant Garamond', Georgia, serif;
+      --fd: 'Playfair Display', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --fa: 'Space Grotesk', system-ui, sans-serif;
+
+      --wrap-max: 1320px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--fb);
+      background: var(--noir-black);
+      color: var(--champagne);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ─────────────────────────────────────────────
+       SECTION BACKGROUNDS
+    ───────────────────────────────────────────── */
+    .bg-dark { background: var(--noir-black); }
+
+    .bg-alt  { background: #110609; }
+
+    .bg-light {
+      background: var(--cream);
+      color: var(--noir-black);
+    }
+
+    /* ─────────────────────────────────────────────
+       LAYOUT WRAPPER
+    ───────────────────────────────────────────── */
+    .wrap {
+      max-width: var(--wrap-max);
+      margin: 0 auto;
+      padding: clamp(64px, 8vw, 112px) clamp(24px, 5vw, 64px);
+    }
+
+    /* ─────────────────────────────────────────────
+       SECTION LABELS
+    ───────────────────────────────────────────── */
+    .s-num {
+      display: block;
+      font-family: var(--fa);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 4.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+      margin-bottom: 20px;
+    }
+
+    .bg-light .s-num { color: var(--saffron); opacity: 0.75; }
+
+    .s-title {
+      font-family: var(--fd);
+      font-size: clamp(38px, 5.5vw, 72px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      color: inherit;
+    }
+
+    .s-sub {
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.75;
+      opacity: 0.52;
+      max-width: 540px;
+      margin-bottom: clamp(40px, 6vw, 72px);
+    }
+
+    /* ─────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px);
+      background:
+        radial-gradient(ellipse 90% 70% at 10% 60%, rgba(86,25,38,0.5) 0%, transparent 60%),
+        radial-gradient(ellipse 75% 55% at 90% 20%, rgba(46,36,65,0.45) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 45% at 55% 90%, rgba(28,10,14,0.7) 0%, transparent 65%),
+        var(--noir-black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle grid overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 119px,
+          rgba(216,160,85,0.022) 120px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent 0,
+          transparent 119px,
+          rgba(216,160,85,0.014) 120px
+        );
+      pointer-events: none;
+    }
+
+    /* Gradient bleed into next section */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent, #110609);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--fa);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-bottom: 44px;
+      position: relative;
+    }
+
+    .hero-wordmark {
+      font-family: var(--fc);
+      font-size: clamp(80px, 17vw, 240px);
+      font-weight: 300;
+      letter-spacing: -4px;
+      line-height: 0.86;
+      color: var(--champagne);
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .hero-tagline {
+      font-family: var(--fd);
+      font-size: clamp(18px, 2.4vw, 28px);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .hero-rule {
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0.45;
+      margin: 0 auto 40px;
+      position: relative;
+    }
+
+    .hero-desc {
+      font-size: clamp(15px, 1.4vw, 17px);
+      line-height: 1.82;
+      max-width: 500px;
+      opacity: 0.58;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .tag {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--champagne);
+      border: 1px solid rgba(216,160,85,0.22);
+      padding: 9px 18px;
+      border-radius: 1px;
+      opacity: 0.65;
+      transition: opacity 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+      cursor: default;
+    }
+
+    .tag:hover {
+      opacity: 1;
+      border-color: rgba(216,160,85,0.55);
+      color: var(--gold);
+    }
+
+    /* ─────────────────────────────────────────────
+       01 — COLOR PALETTE
+    ───────────────────────────────────────────── */
+    .pal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pal-card {
+      background: rgba(255,255,255,0.022);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 4px;
+      padding: 28px 24px;
+      transition: border-color 0.3s ease;
+    }
+
+    .pal-card:hover {
+      border-color: rgba(216,160,85,0.22);
+    }
+
+    .pal-name {
+      font-family: var(--fd);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--champagne);
+      margin-bottom: 4px;
+    }
+
+    .pal-role {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 22px;
+    }
+
+    .swatch {
+      height: 50px;
+      margin-bottom: 2px;
+      border-radius: 2px;
+      display: flex;
+      align-items: flex-end;
+      padding: 7px 10px;
+      transition: height 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: default;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .swatch:last-of-type { margin-bottom: 0; }
+
+    .swatch:hover { height: 76px; }
+
+    .swatch > div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .swatch:hover > div { opacity: 1; }
+
+    .swatch-hex {
+      font-family: var(--fa);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    }
+
+    .swatch-name {
+      font-family: var(--fa);
+      font-size: 9px;
+      color: rgba(255,255,255,0.6);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    }
+
+    /* ─────────────────────────────────────────────
+       02 — TYPOGRAPHY
+    ───────────────────────────────────────────── */
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .type-card {
+      background: rgba(255,255,255,0.022);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 4px;
+      padding: clamp(24px, 3vw, 40px);
+    }
+
+    .type-card.fw {
+      grid-column: 1 / -1;
+    }
+
+    .type-role {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 14px;
+    }
+
+    .font-badge {
+      display: inline-block;
+      font-family: var(--fa);
+      font-size: 10.5px;
+      font-weight: 500;
+      background: rgba(216,160,85,0.1);
+      color: var(--gold);
+      border: 1px solid rgba(216,160,85,0.18);
+      padding: 5px 13px;
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+
+    .pair-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(24px, 4vw, 48px);
+    }
+
+    .pair-label {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.3;
+      margin-bottom: 18px;
+    }
+
+    .disp {
+      font-family: var(--fc);
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 0.86;
+      margin-bottom: 18px;
+      color: var(--champagne);
+    }
+
+    .ital {
+      font-family: var(--fc);
+      font-size: clamp(22px, 2.8vw, 34px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 22px;
+      line-height: 1.2;
+    }
+
+    .body-text {
+      font-family: var(--fb);
+      font-size: 14.5px;
+      line-height: 1.82;
+      opacity: 0.62;
+      margin-bottom: 22px;
+    }
+
+    .rationale {
+      font-family: var(--fa);
+      font-size: 11px;
+      line-height: 1.65;
+      opacity: 0.38;
+    }
+
+    .h1s {
+      font-family: var(--fd);
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700;
+      line-height: 1.08;
+      margin-bottom: 14px;
+      color: var(--champagne);
+    }
+
+    .h2s {
+      font-family: var(--fd);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--champagne);
+    }
+
+    .h3s {
+      font-family: var(--fd);
+      font-size: clamp(17px, 2vw, 24px);
+      font-style: italic;
+      line-height: 1.25;
+      margin-bottom: 24px;
+      color: var(--champagne);
+    }
+
+    .label-text {
+      font-family: var(--fa);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--champagne);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────────
+       03 — UI CARDS
+    ───────────────────────────────────────────── */
+    .ui-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .ui-card {
+      border-radius: 18px;
+      padding: 22px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      min-height: 340px;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.3s ease;
+    }
+
+    .ui-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 72px rgba(0,0,0,0.45);
+    }
+
+    .ui-title {
+      font-family: var(--fd);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      line-height: 1.2;
+    }
+
+    .ui-desc {
+      font-size: 10.5px;
+      opacity: 0.4;
+      margin-bottom: 18px;
+      font-family: var(--fa);
+      letter-spacing: 0.2px;
+    }
+
+    .ui-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    /* Wardrobe Scanner – 3×3 phone grid */
+    .phone {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      width: 100%;
+    }
+
+    .ci {
+      aspect-ratio: 3 / 4;
+      border-radius: 5px;
+      background: rgba(216,160,85,0.1);
+      border: 1px solid rgba(216,160,85,0.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ci::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(216,160,85,0.07), transparent 60%);
+    }
+
+    /* Outfit Builder */
+    .outfit-list { width: 100%; }
+
+    .outfit-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(226,209,187,0.07);
+    }
+
+    .outfit-swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .outfit-lines { flex: 1; }
+
+    .outfit-line {
+      height: 5px;
+      border-radius: 3px;
+      background: rgba(226,209,187,0.18);
+      margin-bottom: 5px;
+    }
+
+    .outfit-line.s {
+      width: 52%;
+      background: rgba(226,209,187,0.1);
+      margin-bottom: 0;
+    }
+
+    /* Cultural Discovery */
+    .cult-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      width: 100%;
+    }
+
+    .cult-tile {
+      border-radius: 7px;
+      padding: 12px 5px;
+      font-family: var(--fa);
+      font-size: 7.5px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--linen);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* Style Profile */
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clay), var(--noir-rose));
+      margin: 0 auto 10px;
+      box-shadow: 0 0 0 3px rgba(149,110,100,0.18), 0 0 0 6px rgba(149,110,100,0.07);
+    }
+
+    .style-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .stag {
+      font-family: var(--fa);
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(13,7,8,0.08);
+      border: 1px solid rgba(13,7,8,0.12);
+      color: var(--noir-black);
+      padding: 4px 8px;
+      border-radius: 1px;
+    }
+
+    /* Chat Stylist */
+    .chat { width: 100%; }
+
+    .ai-label-sm {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--fa);
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--periwinkle);
+      margin-bottom: 10px;
+      opacity: 0.85;
+    }
+
+    .ai-dot-sm {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--periwinkle);
+      animation: ai-pulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes ai-pulse {
+      0%, 100% { opacity: 1;   transform: scale(1);   }
+      50%       { opacity: 0.3; transform: scale(0.7); }
+    }
+
+    .bubble {
+      padding: 8px 11px;
+      border-radius: 11px;
+      font-size: 10.5px;
+      line-height: 1.55;
+      margin-bottom: 6px;
+      max-width: 92%;
+    }
+
+    .bubble.ai {
+      background: rgba(89,102,157,0.2);
+      border: 1px solid rgba(89,102,157,0.18);
+      color: rgba(242,247,248,0.9);
+      border-radius: 11px 11px 11px 2px;
+    }
+
+    .bubble.user {
+      background: rgba(242,247,248,0.07);
+      border: 1px solid rgba(242,247,248,0.07);
+      color: rgba(242,247,248,0.55);
+      border-radius: 11px 11px 2px 11px;
+      margin-left: auto;
+    }
+
+    /* Occasion Planner */
+    .occ-list { width: 100%; }
+
+    .occ-item {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .occ-item:last-child { border-bottom: none; }
+
+    .occ-name {
+      font-family: var(--fd);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--linen);
+      margin-bottom: 2px;
+    }
+
+    .occ-date {
+      font-family: var(--fa);
+      font-size: 8.5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.38;
+    }
+
+    /* Palette dots */
+    .dom-col {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .dom-label {
+      font-family: var(--fa);
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      opacity: 0.28;
+    }
+
+    .dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+
+    /* ─────────────────────────────────────────────
+       04 — DESIGN PRINCIPLES
+    ───────────────────────────────────────────── */
+    .prin-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .prin-card {
+      background: rgba(255,255,255,0.022);
+      border: 1px solid rgba(255,255,255,0.055);
+      border-radius: 4px;
+      padding: clamp(28px, 4vw, 44px);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .prin-card:hover {
+      border-color: rgba(216,160,85,0.2);
+    }
+
+    /* Giant ghost number behind each card */
+    .prin-card::before {
+      content: attr(data-n);
+      position: absolute;
+      top: -28px;
+      right: 20px;
+      font-family: var(--fc);
+      font-size: 180px;
+      font-weight: 300;
+      line-height: 1;
+      color: rgba(216,160,85,0.042);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .prin-num {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.52;
+      margin-bottom: 14px;
+    }
+
+    .prin-title {
+      font-family: var(--fd);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--champagne);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .prin-desc {
+      font-size: 13.5px;
+      line-height: 1.82;
+      opacity: 0.52;
+      position: relative;
+    }
+
+    /* ─────────────────────────────────────────────
+       05 — TYPE SCALE & SPACING
+    ───────────────────────────────────────────── */
+    .ts-row {
+      display: flex;
+      align-items: baseline;
+      gap: clamp(20px, 4vw, 44px);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(13,7,8,0.1);
+    }
+
+    .ts-meta {
+      width: 88px;
+      flex-shrink: 0;
+    }
+
+    .ts-label {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--clay);
+      margin-bottom: 3px;
+    }
+
+    .ts-size {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      color: rgba(13,7,8,0.35);
+    }
+
+    .ts-sample {
+      font-family: var(--fb);
+      color: var(--noir-black);
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    /* Spacing grid */
+    .space-grid {
+      display: flex;
+      align-items: flex-end;
+      gap: clamp(12px, 2vw, 22px);
+      margin-top: 56px;
+      padding: 36px 0 20px;
+      border-top: 1px solid rgba(13,7,8,0.1);
+      flex-wrap: wrap;
+    }
+
+    .space-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .space-box {
+      width: 34px;
+      background: var(--clay);
+      opacity: 0.48;
+      border-radius: 2px;
+    }
+
+    .space-label {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      color: rgba(13,7,8,0.38);
+    }
+
+    /* ─────────────────────────────────────────────
+       06 — UI INSPIRATION REFERENCES
+    ───────────────────────────────────────────── */
+    .refs-row1 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    .refs-row2 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .row2-label {
+      display: block;
+      font-family: var(--fa);
+      font-size: 9.5px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      opacity: 0.28;
+      margin-bottom: 18px;
+      color: var(--champagne);
+    }
+
+    .ref-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      border-radius: 9px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.022);
+      border: 1px solid rgba(255,255,255,0.055);
+      transition: border-color 0.28s ease,
+                  transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.28s ease;
+    }
+
+    .ref-card:hover {
+      border-color: rgba(216,160,85,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.45);
+    }
+
+    .ref-img-wrap {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .ref-img-wrap.tall  { height: 300px; }
+    .ref-img-wrap.short { height: 200px; }
+
+    .ref-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .ref-card:hover .ref-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .ref-meta {
+      padding: 13px 15px;
+    }
+
+    .ref-title {
+      font-family: var(--fd);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--champagne);
+      margin-bottom: 2px;
+    }
+
+    .ref-studio {
+      font-family: var(--fa);
+      font-size: 9.5px;
+      opacity: 0.35;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+
+    .ref-colors {
+      display: flex;
+      gap: 4px;
+    }
+
+    .ref-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    /* ─────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────── */
+    footer {
+      background: var(--noir-black);
+      border-top: 1px solid rgba(216,160,85,0.07);
+      padding: clamp(48px, 6vw, 80px) clamp(24px, 5vw, 64px);
+      text-align: center;
+    }
+
+    .footer-wm {
+      font-family: var(--fc);
+      font-size: clamp(48px, 9vw, 120px);
+      font-weight: 300;
+      letter-spacing: -2px;
+      color: var(--champagne);
+      opacity: 0.11;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .footer-copy {
+      font-family: var(--fa);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.22;
+      color: var(--champagne);
+    }
+
+    /* ─────────────────────────────────────────────
+       SCROLL REVEAL
+    ───────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* Stagger children inside a reveal parent */
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+
+    /* ─────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .pal-grid        { grid-template-columns: 1fr; }
+      .type-grid       { grid-template-columns: 1fr; }
+      .type-card.fw    { grid-column: auto; }
+      .pair-grid       { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .ui-grid         { grid-template-columns: repeat(2, 1fr); }
+      .prin-grid       { grid-template-columns: 1fr; }
+      .refs-row1,
+      .refs-row2       { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .ui-grid         { grid-template-columns: 1fr; }
+      .pair-grid       { grid-template-columns: 1fr; }
+      .refs-row1,
+      .refs-row2       { grid-template-columns: repeat(2, 1fr); }
+      .ref-img-wrap.tall  { height: 200px; }
+    }
+
+    @media (max-width: 520px) {
+      .refs-row1,
+      .refs-row2       { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Brand Mood Board · 2026</p>
+  <h1 class="hero-wordmark">StyleWand</h1>
+  <p class="hero-tagline">Your Wardrobe. Reimagined.</p>
+  <div class="hero-rule"></div>
+  <p class="hero-desc">AI-powered personal styling that democratizes luxury through cultural intelligence, radical inclusivity, and the joy of confident self-expression.</p>
+  <div class="hero-tags">
+    <span class="tag">AI Styling</span><span class="tag">Cultural Intelligence</span><span class="tag">Luxury for All</span><span class="tag">Joyful Confidence</span>
+  </div>
+</div>
+
+<!-- 01 COLORS -->
+<div class="bg-alt"><div class="wrap">
+  <span class="s-num reveal">01 — Color System</span>
+  <h2 class="s-title reveal">Three Voices,<br>One Identity</h2>
+  <p class="s-sub reveal">A layered palette balancing dark luxury, global warmth and AI-native clarity — each with a distinct emotional register.</p>
+  <div class="pal-grid reveal-stagger">
+    <div class="pal-card">
+      <div class="pal-name">Luxury Noir</div><div class="pal-role">Primary · Brand Foundation</div>
+      <div class="swatch" style="background:#0D0708"><div><div class="swatch-hex">#0D0708</div><div class="swatch-name">Velvet Black</div></div></div>
+      <div class="swatch" style="background:#1C0A0E"><div><div class="swatch-hex">#1C0A0E</div><div class="swatch-name">Deep Burgundy Night</div></div></div>
+      <div class="swatch" style="background:#561926"><div><div class="swatch-hex">#561926</div><div class="swatch-name">Rich Crimson</div></div></div>
+      <div class="swatch" style="background:#993436"><div><div class="swatch-hex">#993436</div><div class="swatch-name">Terracotta Rose</div></div></div>
+      <div class="swatch" style="background:#D8A055"><div><div class="swatch-hex">#D8A055</div><div class="swatch-name">Lagos Gold</div></div></div>
+      <div class="swatch" style="background:#E2D1BB"><div><div class="swatch-hex">#E2D1BB</div><div class="swatch-name">Champagne Linen</div></div></div>
+    </div>
+    <div class="pal-card">
+      <div class="pal-name">Cultural Earth</div><div class="pal-role">Secondary · Global Warmth</div>
+      <div class="swatch" style="background:#2E2441"><div><div class="swatch-hex">#2E2441</div><div class="swatch-name">Midnight Indigo</div></div></div>
+      <div class="swatch" style="background:#956E64"><div><div class="swatch-hex">#956E64</div><div class="swatch-name">Kalahari Clay</div></div></div>
+      <div class="swatch" style="background:#C38A3E"><div><div class="swatch-hex">#C38A3E</div><div class="swatch-name">Saffron Spice</div></div></div>
+      <div class="swatch" style="background:#FDF4E9"><div><div class="swatch-hex">#FDF4E9</div><div class="swatch-name">Desert Cream</div></div></div>
+      <div class="swatch" style="background:#EAE8DC"><div><div class="swatch-hex">#EAE8DC</div><div class="swatch-name">Linen White</div></div></div>
+      <div class="swatch" style="background:#718777"><div><div class="swatch-hex">#718777</div><div class="swatch-name">Forest Sage</div></div></div>
+    </div>
+    <div class="pal-card">
+      <div class="pal-name">AI Clarity</div><div class="pal-role">Accent · Interface &amp; AI</div>
+      <div class="swatch" style="background:#101314"><div><div class="swatch-hex">#101314</div><div class="swatch-name">Onyx</div></div></div>
+      <div class="swatch" style="background:#3B4447"><div><div class="swatch-hex">#3B4447</div><div class="swatch-name">Storm Slate</div></div></div>
+      <div class="swatch" style="background:#59669D"><div><div class="swatch-hex">#59669D</div><div class="swatch-name">Periwinkle AI</div></div></div>
+      <div class="swatch" style="background:#F2F7F8"><div><div class="swatch-hex">#F2F7F8</div><div class="swatch-name">Ice White</div></div></div>
+      <div class="swatch" style="background:#F66D94"><div><div class="swatch-hex">#F66D94</div><div class="swatch-name">Vibrant Rose</div></div></div>
+      <div class="swatch" style="background:#A35DAE"><div><div class="swatch-hex">#A35DAE</div><div class="swatch-name">Digital Violet</div></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 02 TYPOGRAPHY -->
+<div class="bg-dark"><div class="wrap">
+  <span class="s-num reveal">02 — Typography System</span>
+  <h2 class="s-title reveal">A Type System<br>Born for Fashion</h2>
+  <p class="s-sub reveal">Four Google Fonts, each with a distinct role — editorial grandeur to AI-native precision.</p>
+  <div class="type-grid reveal">
+    <div class="type-card fw">
+      <div class="type-role">Display / Wordmark · Primary Pairing</div>
+      <span class="font-badge">Cormorant Garamond + DM Sans</span>
+      <div class="pair-grid">
+        <div>
+          <div class="pair-label">Display — Cormorant Garamond Light</div>
+          <div class="disp">StyleWand</div>
+          <div class="ital">Your Identity, Elevated.</div>
+          <div class="rationale">✦ High-contrast old-style serif. Echoes Vogue, Harper's Bazaar, The Row. Ranked #8 on Typewolf 2026.</div>
+        </div>
+        <div>
+          <div class="pair-label">Body — DM Sans Regular</div>
+          <div class="body-text">Our AI analyzes your wardrobe, preferences, and cultural influences to create outfits that feel authentically you. Every recommendation is personal and purposeful.</div>
+          <div class="rationale" style="margin-top:16px">✦ Humanist sans — warm, accessible, inclusive. Used by Notion and Linear. Ranked #1 on Typewolf 2026.</div>
+        </div>
+      </div>
+    </div>
+    <div class="type-card">
+      <div class="type-role">Heading · H1–H3</div>
+      <span class="font-badge">Playfair Display</span>
+      <div class="h1s">Discover Your Style DNA</div>
+      <div class="h2s">Build Your Digital Wardrobe</div>
+      <div class="h3s">Smart Outfit Suggestions</div>
+      <div class="rationale">✦ Editorial serif for section titles — creates luxury/accessible contrast with DM Sans body.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-role">Accent / Labels</div>
+      <span class="font-badge">Space Grotesk</span>
+      <div class="label-text">SMART CASUAL • CULTURAL PICKS</div>
+      <div class="label-text" style="color:#A35DAE">AI RECOMMENDED • TRENDING NOW</div>
+      <div class="label-text" style="color:#D8A055">NEW ARRIVALS • LAGOS EDIT</div>
+      <div class="rationale">✦ Geometric sans with techy energy — perfect for AI labels, category chips, feature callouts. Ranked #4 on Typewolf 2026.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 03 UI CONCEPTS -->
+<div class="bg-alt"><div class="wrap">
+  <span class="s-num reveal">03 — UI Design Direction</span>
+  <h2 class="s-title reveal">Six Screens,<br>One Vision</h2>
+  <p class="s-sub reveal">Concept UI directions for key app screens, each grounded in a distinct palette voice.</p>
+  <div class="ui-grid reveal-stagger">
+    <div class="ui-card" style="background:#0D0708;border:1px solid rgba(216,160,85,.14);color:#E2D1BB">
+      <div class="ui-title">Wardrobe Scanner</div><div class="ui-desc">Scan &amp; digitize your closet with AI</div>
+      <div class="ui-body"><div class="phone"><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div><div class="ci"></div></div></div>
+      <div class="dom-col"><div class="dom-label">PALETTE</div><div class="dots"><div class="dot" style="background:#0D0708;border:1px solid rgba(216,160,85,.3)"></div><div class="dot" style="background:#D8A055"></div><div class="dot" style="background:#E2D1BB"></div></div></div>
+    </div>
+    <div class="ui-card" style="background:#1C0A0E;border:1px solid rgba(153,52,54,.3);color:#E2D1BB">
+      <div class="ui-title">AI Outfit Builder</div><div class="ui-desc">AI combinations with cultural context</div>
+      <div class="ui-body">
+        <div class="outfit-list">
+          <div style="font-family:var(--fa);font-size:8px;letter-spacing:2px;color:rgba(216,160,85,.7);margin-bottom:3px">TODAY'S LOOKS</div>
+          <div class="outfit-row"><div class="outfit-swatch" style="background:linear-gradient(135deg,#993436,#561926)"></div><div class="outfit-lines"><div class="outfit-line"></div><div class="outfit-line s"></div></div><div style="font-size:9px;color:#D8A055">Lagos Edit</div></div>
+          <div class="outfit-row"><div class="outfit-swatch" style="background:linear-gradient(135deg,#D8A055,#C38A3E)"></div><div class="outfit-lines"><div class="outfit-line"></div><div class="outfit-line s"></div></div><div style="font-size:9px;opacity:.5">Minimal</div></div>
+          <div class="outfit-row"><div class="outfit-swatch" style="background:linear-gradient(135deg,#2E2441,#59669D)"></div><div class="outfit-lines"><div class="outfit-line"></div><div class="outfit-line s"></div></div><div style="font-size:9px;opacity:.5">Evening</div></div>
+        </div>
+      </div>
+      <div class="dom-col"><div class="dom-label">PALETTE</div><div class="dots"><div class="dot" style="background:#1C0A0E;border:1px solid rgba(216,160,85,.3)"></div><div class="dot" style="background:#993436"></div><div class="dot" style="background:#D8A055"></div></div></div>
+    </div>
+    <div class="ui-card" style="background:#2E2441;border:1px solid rgba(89,102,157,.3);color:#EAE8DC">
+      <div class="ui-title">Cultural Discovery</div><div class="ui-desc">Style from global fashion traditions</div>
+      <div class="ui-body">
+        <div class="cult-grid">
+          <div class="cult-tile" style="background:rgba(195,138,62,.2)">Lagos Chic</div>
+          <div class="cult-tile" style="background:rgba(163,93,174,.2)">Seoul Edge</div>
+          <div class="cult-tile" style="background:rgba(113,135,119,.2)">Marrakech</div>
+          <div class="cult-tile" style="background:rgba(89,102,157,.2)">Tokyo Min.</div>
+          <div class="cult-tile" style="background:rgba(149,110,100,.2)">Mumbai</div>
+          <div class="cult-tile" style="background:rgba(216,160,85,.2)">Rio Fest.</div>
+        </div>
+      </div>
+      <div class="dom-col"><div class="dom-label">PALETTE</div><div class="dots"><div class="dot" style="background:#2E2441;border:1px solid rgba(89,102,157,.4)"></div><div class="dot" style="background:#59669D"></div><div class="dot" style="background:#C38A3E"></div></div></div>
+    </div>
+    <div class="ui-card" style="background:#FDF4E9;border:1px solid rgba(149,110,100,.2);color:#0D0708">
+      <div class="ui-title" style="color:#0D0708">Style Profile</div><div class="ui-desc" style="color:rgba(13,7,8,.45)">Your style DNA, curated by AI</div>
+      <div class="ui-body" style="flex-direction:column">
+        <div class="avatar"></div>
+        <div style="font-family:var(--fd);font-size:16px;color:#0D0708;margin-bottom:10px;text-align:center">Amara J.</div>
+        <div class="style-tags"><span class="stag">Afro-Chic</span><span class="stag">Minimal</span><span class="stag">Earthy</span><span class="stag">Lagos Edit</span></div>
+      </div>
+      <div class="dom-col"><div class="dom-label" style="color:rgba(13,7,8,.35)">PALETTE</div><div class="dots"><div class="dot" style="background:#FDF4E9;border:1px solid rgba(13,7,8,.1)"></div><div class="dot" style="background:#956E64"></div><div class="dot" style="background:#993436"></div></div></div>
+    </div>
+    <div class="ui-card" style="background:#101314;border:1px solid rgba(89,102,157,.22);color:#F2F7F8">
+      <div class="ui-title">Chat Stylist</div><div class="ui-desc">AI-powered conversational styling</div>
+      <div class="ui-body">
+        <div class="chat">
+          <div class="ai-label-sm"><div class="ai-dot-sm"></div> StyleWand AI</div>
+          <div class="bubble ai">Let's elevate your look with Lagos streetwear energy.</div>
+          <div class="bubble user">What pairs with my terracotta blazer?</div>
+          <div class="bubble ai">Ivory wide-legs + gold accessories — Afro-luxe editorial.</div>
+        </div>
+      </div>
+      <div class="dom-col"><div class="dom-label" style="color:rgba(89,102,157,.7)">PALETTE</div><div class="dots"><div class="dot" style="background:#101314;border:1px solid rgba(89,102,157,.4)"></div><div class="dot" style="background:#59669D"></div><div class="dot" style="background:#A35DAE"></div></div></div>
+    </div>
+    <div class="ui-card" style="background:#718777;border:1px solid rgba(255,255,255,.15);color:#EAE8DC">
+      <div class="ui-title">Occasion Planner</div><div class="ui-desc">Smart outfit scheduling for your life</div>
+      <div class="ui-body">
+        <div class="occ-list">
+          <div style="font-family:var(--fa);font-size:8px;letter-spacing:2px;color:rgba(234,232,220,.55);margin-bottom:3px">THIS WEEK</div>
+          <div class="occ-item"><div class="occ-name">Board Meeting</div><div class="occ-date">Monday · Business Formal</div></div>
+          <div class="occ-item"><div class="occ-name">Afrobeats Night</div><div class="occ-date">Friday · Cultural Chic</div></div>
+          <div class="occ-item"><div class="occ-name">Farmers Market</div><div class="occ-date">Sunday · Smart Casual</div></div>
+        </div>
+      </div>
+      <div class="dom-col"><div class="dom-label" style="color:rgba(234,232,220,.45)">PALETTE</div><div class="dots"><div class="dot" style="background:#718777;border:1px solid rgba(255,255,255,.2)"></div><div class="dot" style="background:#EAE8DC"></div><div class="dot" style="background:#FDF4E9"></div></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 04 PRINCIPLES -->
+<div class="bg-dark"><div class="wrap">
+  <span class="s-num reveal">04 — Design Principles</span>
+  <h2 class="s-title reveal">What Every Pixel<br>Must Feel Like</h2>
+  <p class="s-sub reveal">Four principles guide every decision — from button states to onboarding flows.</p>
+  <div class="prin-grid reveal-stagger">
+    <div class="prin-card" data-n="01"><div class="prin-num">Principle 01</div><div class="prin-title">Warm Luxury</div><div class="prin-desc">Premium aesthetics without intimidation. Dark backdrops and high-contrast type evoke editorial fashion, while warm gold and linen tones make the experience feel like a trusted friend — not a gatekeeping brand.</div></div>
+    <div class="prin-card" data-n="02"><div class="prin-num">Principle 02</div><div class="prin-title">Cultural Depth</div><div class="prin-desc">Global inspiration without appropriation. Style cues reference specific heritages (Lagos streetwear, Tokyo minimalism, Mumbai festive) with specificity and respect — never as generic "world art."</div></div>
+    <div class="prin-card" data-n="03"><div class="prin-num">Principle 03</div><div class="prin-title">AI Transparency</div><div class="prin-desc">Show the reasoning behind every recommendation. Periwinkle (#59669D) as a dedicated AI voice color creates a distinct, trustworthy visual language. Users are collaborators, not passive recipients.</div></div>
+    <div class="prin-card" data-n="04"><div class="prin-num">Principle 04</div><div class="prin-title">Joyful Precision</div><div class="prin-desc">Micro-interactions that feel like getting dressed on a good day. Confident transitions, playful reveals, and precise spacing communicate that StyleWand is both expert and joyful — never sterile.</div></div>
+  </div>
+</div></div>
+
+<!-- 05 TYPE SCALE -->
+<div class="bg-light"><div class="wrap">
+  <span class="s-num reveal">05 — Type Scale &amp; Spacing</span>
+  <h2 class="s-title reveal">Systematic Scale</h2>
+  <p class="s-sub reveal">Cormorant Garamond for display, Playfair for headings — grounded in an 8pt spacing grid.</p>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">Display</div><div class="ts-size">72px / 0.9lh</div></div><div class="ts-sample" style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300">StyleWand</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">H1</div><div class="ts-size">48px / 1.1lh</div></div><div class="ts-sample" style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700">Discover Your Style</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">H2</div><div class="ts-size">36px / 1.2lh</div></div><div class="ts-sample" style="font-family:'Playfair Display',serif;font-size:36px">Your Digital Wardrobe</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">H3</div><div class="ts-size">24px / 1.3lh</div></div><div class="ts-sample" style="font-family:'Playfair Display',serif;font-size:24px;font-style:italic">Today's Outfit Picks</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">Body Lg</div><div class="ts-size">18px / 1.7lh</div></div><div class="ts-sample" style="font-size:18px">AI styling that knows your wardrobe better than you do.</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">Body</div><div class="ts-size">16px / 1.7lh</div></div><div class="ts-sample" style="font-size:16px">Our AI analyzes your wardrobe, preferences, and cultural influences to create outfits that feel authentically you.</div></div>
+  <div class="ts-row reveal"><div class="ts-meta"><div class="ts-label">Caption</div><div class="ts-size">12px / 1.5lh</div></div><div class="ts-sample" style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase">AI RECOMMENDED · LAGOS EDIT · SMART CASUAL</div></div>
+  <div class="space-grid reveal">
+    <div class="space-item"><div class="space-box" style="height:4px"></div><div class="space-label">4</div></div>
+    <div class="space-item"><div class="space-box" style="height:8px"></div><div class="space-label">8</div></div>
+    <div class="space-item"><div class="space-box" style="height:12px"></div><div class="space-label">12</div></div>
+    <div class="space-item"><div class="space-box" style="height:16px"></div><div class="space-label">16</div></div>
+    <div class="space-item"><div class="space-box" style="height:24px"></div><div class="space-label">24</div></div>
+    <div class="space-item"><div class="space-box" style="height:32px"></div><div class="space-label">32</div></div>
+    <div class="space-item"><div class="space-box" style="height:48px"></div><div class="space-label">48</div></div>
+    <div class="space-item"><div class="space-box" style="height:64px"></div><div class="space-label">64</div></div>
+    <div class="space-item"><div class="space-box" style="height:96px"></div><div class="space-label">96</div></div>
+  </div>
+</div></div>
+
+<!-- 06 UI REFERENCES — REAL IMAGES -->
+<div class="bg-alt"><div class="wrap">
+  <span class="s-num reveal">06 — UI Inspiration References</span>
+  <h2 class="s-title reveal">Research-Backed<br>Aesthetic Direction</h2>
+  <p class="s-sub reveal">Top AI fashion app designs from Dribbble that directly shaped StyleWand's visual language — color, layout density, and UI structure.</p>
+  <!-- Row 1: Five key references -->
+  <div class="refs-row1 reveal-stagger">
+    <a class="ref-card" href="https://dribbble.com/shots/25764231-StyleScape-Clothing-Ecommerce-Fashion-Mobile-App" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://cdn.dribbble.com/userupload/41572670/file/original-fcce2a050b42441e80252fc7293ab1be.png?resize=752x&vertical=center" alt="StyleScape by Phenomenon Studio" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">StyleScape</div>
+        <div class="ref-studio">Phenomenon Studio · 99.4k views</div>
+        <div class="ref-colors"><div class="ref-dot" style="background:#0D0708"></div><div class="ref-dot" style="background:#561926"></div><div class="ref-dot" style="background:#D8A055"></div><div class="ref-dot" style="background:#E2D1BB"></div></div>
+      </div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26047048-AI-Powered-Outfit-Assistant" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://cdn.dribbble.com/userupload/43385080/file/original-7801ce9b11b44ca6477c96744b7c3894.png?resize=752x&vertical=center" alt="Wear Your Mind by Uptech" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">Wear Your Mind</div>
+        <div class="ref-studio">Uptech · AI Outfit Assistant</div>
+        <div class="ref-colors"><div class="ref-dot" style="background:#040404"></div><div class="ref-dot" style="background:#EAE8DC"></div><div class="ref-dot" style="background:#718777"></div><div class="ref-dot" style="background:#574F40"></div></div>
+      </div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26682135-DX-Style-AI-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://cdn.dribbble.com/userupload/45414947/file/bd4f4d3cd8db70b31c97ccff115d8f59.png?resize=752x&vertical=center" alt="DX Style by Kostia Dmitriiev" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">DX Style</div>
+        <div class="ref-studio">Kostia Dmitriiev · AI Stylist</div>
+        <div class="ref-colors"><div class="ref-dot" style="background:#080E0B"></div><div class="ref-dot" style="background:#F6B05E"></div><div class="ref-dot" style="background:#C38A3E"></div><div class="ref-dot" style="background:#FDF4E9"></div></div>
+      </div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://cdn.dribbble.com/userupload/45868497/file/12092f6e378f9491df92e6f6a10c660d.png?resize=752x&vertical=center" alt="AI Wardrobe Stylist by Renson Gerald" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">AI Wardrobe Stylist</div>
+        <div class="ref-studio">Renson Gerald · Case Study · 8.8k</div>
+        <div class="ref-colors"><div class="ref-dot" style="background:#0C0706"></div><div class="ref-dot" style="background:#F66D94"></div><div class="ref-dot" style="background:#A35DAE"></div><div class="ref-dot" style="background:#F3F2F2"></div></div>
+      </div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26557664-Dress-It-Yourself-AI-Fashion-Mobile-App" target="_blank" rel="noopener">
+      <div class="ref-img-wrap tall"><img src="https://cdn.dribbble.com/userupload/45011400/file/69ab235c2c49de68f63bd3e50d901514.png?resize=752x&vertical=center" alt="Dress It Yourself by Nija Works" loading="lazy"></div>
+      <div class="ref-meta">
+        <div class="ref-title">Dress It Yourself</div>
+        <div class="ref-studio">Nija Works · AI Fashion App · 6.6k</div>
+        <div class="ref-colors"><div class="ref-dot" style="background:#100E10"></div><div class="ref-dot" style="background:#E3E2E1"></div><div class="ref-dot" style="background:#956E64"></div><div class="ref-dot" style="background:#2E2441"></div></div>
+      </div>
+    </a>
+  </div>
+  <!-- Row 2: More screens from AI Wardrobe Stylist case study -->
+  <p class="row2-label reveal">MORE SCREENS — AI WARDROBE STYLIST CASE STUDY</p>
+  <div class="refs-row2 reveal-stagger">
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868530/file/7a9bdc207be8b5fe4383d34a39677e56.png?resize=752x&vertical=center" alt="Wardrobe Upload Screen" loading="lazy"></div>
+      <div class="ref-meta"><div class="ref-title">Wardrobe Upload</div><div class="ref-studio">Batch scan flow</div></div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868505/file/a3936efe2f8ce163e818c67fa46a0df6.png?resize=752x&vertical=center" alt="Home Screen" loading="lazy"></div>
+      <div class="ref-meta"><div class="ref-title">Home Screen</div><div class="ref-studio">Daily outfit hub</div></div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868513/file/1928f5f2c26e840164bef44d1a519922.png?resize=752x&vertical=center" alt="Digital Wardrobe" loading="lazy"></div>
+      <div class="ref-meta"><div class="ref-title">Digital Wardrobe</div><div class="ref-studio">Item grid &amp; filters</div></div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868528/file/6f22723009efb3d347c137c0a9233c71.png?resize=752x&vertical=center" alt="Virtual Try-On" loading="lazy"></div>
+      <div class="ref-meta"><div class="ref-title">Virtual Try-On</div><div class="ref-studio">Avatar preview</div></div>
+    </a>
+    <a class="ref-card" href="https://dribbble.com/shots/26825082-Case-Study-AI-Wardrobe-Stylist" target="_blank" rel="noopener">
+      <div class="ref-img-wrap short"><img src="https://cdn.dribbble.com/userupload/45868532/file/895dfb3a69021675bdfbc2e377450a73.png?resize=752x&vertical=center" alt="Sustainability Tracker" loading="lazy"></div>
+      <div class="ref-meta"><div class="ref-title">Sustainability</div><div class="ref-studio">Wear tracker</div></div>
+    </a>
+  </div>
+</div></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wm">StyleWand</div>
+  <div class="footer-copy">© Brand Mood Board · 2026 · AI-Powered Personal Styling</div>
+</footer>
+
+<script>
+  // ── Scroll Reveal ──────────────────────────────────
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('in');
+
+      // Stagger children with a tiny delay per item
+      if (el.classList.contains('reveal-stagger')) {
+        Array.from(el.children).forEach((child, i) => {
+          child.style.transitionDelay = `${i * 80}ms`;
+        });
+      }
+
+      io.unobserve(el);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>
